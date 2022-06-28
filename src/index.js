@@ -107,4 +107,4 @@ const getFigmaData = async (fileId, nodeId) => {
   }
 };
 
-modules.exports = { getFigmaData };
+module.exports = { getFigmaData };
