@@ -106,3 +106,5 @@ const getFigmaData = async (fileId, nodeId) => {
     console.error("error:" + err);
   }
 };
+
+modules.exports = { getFigmaData };
