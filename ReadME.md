@@ -2,9 +2,9 @@
 # Figma to Video Project
 
 ## Tech stack
-Node JS
-[Figma API](https://www.figma.com/developers/api)
-[Editframe Video API](https://www.editframe.com/)
+- Node JS
+- [Figma API](https://www.figma.com/developers/api)
+- [Editframe Video API](https://www.editframe.com/)
 
 ## Prerequisites
 You will need a few things to get going with this app:
