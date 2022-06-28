@@ -31,5 +31,6 @@ jobs:
           envkey_CLIENT_ID: ${{ secrets.CLIENT_ID }}
           envkey_FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
           envkey_TOKEN: ${{ secrets.TOKEN }}
+      - run: npm install
       - run: npm run build --if-present
       - run: npm test
