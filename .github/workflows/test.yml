@@ -2,13 +2,27 @@ name: Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  build:
+  create-envfile:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1.3
+        with:
+  with:
+    CLIENT_ID: ${{ secrets.CLIENT_ID }}
+    FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+    TOKEN: ${{ secrets.TOKEN }}
+    directory: .
+    file_name: .env
+    fail_on_empty: false
+
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,18 +30,9 @@ jobs:
         node-version: [14.x, 16.x, 17.x]
 
     steps:
-    - uses: SpicyPizza/create-envfile@v1.3
-    - name: Make envfile
-      with:
-        CLIENT_ID: ${{ secrets.CLIENT_ID }}
-        FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-        TOKEN: ${{ secrets.TOKEN }}
-        directory: .
-        file_name: .env
-        fail_on_empty: false
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm test
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm test
