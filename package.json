@@ -1,0 +1,22 @@
+{
+  "name": "figma-use-case-editframe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "start": "node main",
+    "dev": "nodemon main.js --watch *.js"
+  },
+  "dependencies": {
+    "@editframe/editframe-js": "^2.4.4",
+    "chroma-js": "^2.4.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "node-fetch": "2",
+    "supertest": "^6.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
