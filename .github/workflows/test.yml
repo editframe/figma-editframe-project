@@ -12,15 +12,14 @@ jobs:
 
     steps:
       - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1.3
+      - uses: SpicyPizza/create-envfile@v1.3
         with:
-  with:
-    CLIENT_ID: ${{ secrets.CLIENT_ID }}
-    FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-    TOKEN: ${{ secrets.TOKEN }}
-    directory: .
-    file_name: .env
-    fail_on_empty: false
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
+          directory: .
+          file_name: .env
+          fail_on_empty: false
 
   build:
     runs-on: ubuntu-latest
