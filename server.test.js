@@ -12,7 +12,7 @@ describe("API routes /api", () => {
       fileId: "OvDi0eMar0DiAJ1kpQkp2n",
       nodeId: "115%3A5",
     };
-    await supertest(app).post(`/api/figma`).send(data).expect(200);
+    await supertest(app).post(`/api/figma`).send(data).expect(201);
   });
   test("POST /api/figma send null node id except a error message", async () => {
     const data = {
