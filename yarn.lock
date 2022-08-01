@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@editframe/editframe-js@^2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@editframe/editframe-js/-/editframe-js-2.4.4.tgz#531fca7a1e44588434b36c96dde5a8904a159e7b"
-  integrity sha512-DRcvl1/y51wtXxx63EF21/9emHVWe1g2tetTpuWhu6SkERDMbNVuxtRC/kaYVlbn0XMsn7hQbkcrkLU6k7cTtg==
+"@editframe/editframe-js@^2.4.6":
+  version "2.4.6"
+  resolved "https://registry.yarnpkg.com/@editframe/editframe-js/-/editframe-js-2.4.6.tgz#ec841d8ed671a11a584856510702d98863f7eaf3"
+  integrity sha512-HtKxyWVEq7PY4G1696W6RS0yDd+/woLdv5/9aVkmZzfyMSWIqM5XEG5X8cK/K3mgG55xca7WYqzNShiFhUbq/g==
   dependencies:
     audio-extensions "^0.0.0"
     camelcase-keys "^7.0.2"
@@ -310,6 +310,7 @@
     query-string "^7.1.1"
     temp-dir "^2.0.0"
     ts-mixer "^6.0.0"
+    type-fest "^2.16.0"
     uuid "^8.3.2"
     validate-color "^2.2.1"
     video-extensions "^1.2.0"
@@ -1064,11 +1065,6 @@ chokidar@^3.5.2:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
-
-chroma-js@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/chroma-js/-/chroma-js-2.4.2.tgz#dffc214ed0c11fa8eefca2c36651d8e57cbfb2b0"
-  integrity sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==
 
 ci-info@^2.0.0:
   version "2.0.0"
@@ -3583,6 +3579,11 @@ type-fest@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-1.4.0.tgz#e9fb813fe3bf1744ec359d55d1affefa76f14be1"
   integrity sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==
+
+type-fest@^2.16.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.17.0.tgz#c677030ce61e5be0c90c077d52571eb73c506ea9"
+  integrity sha512-U+g3/JVXnOki1kLSc+xZGPRll3Ah9u2VIG6Sn9iH9YX6UkPERmt6O/0fIyTgsd2/whV0+gAaHAg8fz6sG1QzMA==
 
 type-is@~1.6.18:
   version "1.6.18"
