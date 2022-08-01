@@ -1,8 +1,6 @@
 require("dotenv").config({});
 const fetch = require("node-fetch");
-const chroma = require("chroma-js");
 const { Editframe } = require("@editframe/editframe-js");
-
 let options = {
   method: "GET",
   headers: { "X-FIGMA-TOKEN": process.env.FIGMA_TOKEN },
@@ -10,8 +8,7 @@ let options = {
 // Init new Editframe instance
 const editframe = new Editframe({
   clientId: process.env.CLIENT_ID,
-  token: process.env.TOKEN,
-  host: "https://api.editframe.dev",
+  token: process.env.TOKEN
 });
 
 const getImageDetails = async (imageRef, fileId) => {
@@ -42,18 +39,18 @@ const getFigmaData = async (fileId, nodeId) => {
           height: coordinates.height,
         },
         duration: 3,
-        backgroundColor: chroma(
-          bgColor.r * 256,
-          bgColor.g * 256,
-          bgColor.b * 256
-        ).hex(),
+        backgroundColor: `rgb(${Math.round(bgColor.r * 256)},${Math.round(
+          bgColor.g * 256
+        )},${Math.round(bgColor.b * 256)})`,
       });
       for (const child of json.nodes[Object.keys(json.nodes)[0]].document
         .children) {
         if (child.type === "TEXT") {
           const text = child.characters;
           const rgb = child.fills[0].color;
-          const textColor = chroma(rgb.r * 256, rgb.g * 256, rgb.b * 256).hex();
+          const textColor = `rgb(${Math.round(rgb.r * 256)},${Math.round(
+            rgb.g * 256
+          )},${Math.round(rgb.b * 256)})`;
 
           // Add new text layer to the video with data from Figma API
           await composition.addText(
