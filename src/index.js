@@ -100,7 +100,7 @@ const getFigmaData = async (fileId, nodeId) => {
         }
       }
       // Encode video synchronously, you can encode video async by listening to webhook events in your editframe application
-      resolve(await composition.encode({ synchronously: true }));
+      resolve(await composition.encodeSync());
     } catch (err) {
       console.error("error:" + err);
       reject(err);
